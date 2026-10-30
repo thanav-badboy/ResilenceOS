@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3f5ef">
-  <title>Wardline | Hospital Operations</title>
+  <title>ResilenceOS | Hospital Operations</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
     :root{--ink:#172722;--muted:#75817b;--line:#e4e9e2;--paper:#f3f5ef;--white:#fff;--green:#146a52;--green-dark:#104a3b;--mint:#e7f2eb;--lime:#d8f273;--amber:#a45e13;--amber-bg:#fff2dc;--red:#b84537;--red-bg:#fbe9e5;--blue:#466d9b;--blue-bg:#eaf0f8;--shadow:0 12px 32px rgba(24,49,38,.06)}
@@ -28,7 +28,7 @@
 <body>
   <div class="shell">
     <aside class="sidebar">
-      <div class="brand"><div class="brand-mark">W</div><div><div class="brand-name">wardline</div><div class="brand-sub">Hospital operations</div></div></div>
+      <div class="brand"><div class="brand-mark">R</div><div><div class="brand-name">ResilenceOS</div><div class="brand-sub">Hospital operations</div></div></div>
       <div class="nav-label">Workspace</div>
       <nav class="nav" aria-label="Main navigation">
         <button class="active" data-view="overview"><span class="nav-icon">▦</span>Overview</button>
@@ -189,7 +189,7 @@
       const csv = rows.map(row=>row.map(cell=>`"${String(cell).replaceAll('"','""')}"`).join(',')).join('\n');
       const link = document.createElement('a');
       link.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
-      link.download = 'wardline-audit-log.csv';
+      link.download = 'resilenceos-audit-log.csv';
       link.click();
       URL.revokeObjectURL(link.href);
       announce('<strong>Audit export ready.</strong> CSV downloaded.');
